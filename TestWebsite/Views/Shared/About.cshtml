@@ -1,18 +1,23 @@
 ﻿@using Sitecore.Mvc
 @* @using Sitecore.Mvc.Analytics.Extensions *@
-@{
-    Layout = null;
-}
 <!DOCTYPE html>
+@Styles.Render("~/Content/css")
 <html>
-    <head>
-        <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
-        @* @Html.Sitecore().VisitorIdentification() *@
-    </head>
-    <body>
-        <h1>@Html.Sitecore().Field("title")</h1>
-        <div>
-            @Html.Sitecore().Placeholder("main")
+<head>
+</head>
+<body>
+    <div class="page-wrap d-flex flex-row align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <span class="display-1 d-block">Oh hi Mark!</span>
+                    <div class="mb-4 lead">@Html.Sitecore().Field("body")</div>
+                    <a href="/home" class="btn btn-link">Back to Home</a>
+                </div>
+            </div>
         </div>
-    </body>
+    </div>
+</body>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
 </html>
